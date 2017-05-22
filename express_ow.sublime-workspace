@@ -1,0 +1,1131 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"req",
+				"require"
+			],
+			[
+				"res",
+				"rest_framework\tmodule"
+			],
+			[
+				"obj",
+				"obtain_jwt_token\tstatement"
+			],
+			[
+				"rest_",
+				"rest_framework_jwt\tmodule"
+			],
+			[
+				"valid",
+				"validated_data\tparam"
+			],
+			[
+				"vali",
+				"validated_data\tparam"
+			],
+			[
+				"Pro",
+				"ProfileSerializer\tclass"
+			],
+			[
+				"serl",
+				"serializer_class\tstatement"
+			],
+			[
+				"mo",
+				"ModelViewSet\tclass"
+			],
+			[
+				"view",
+				"viewsets\tmodule"
+			],
+			[
+				"pos",
+				"post_save\tstatement"
+			],
+			[
+				"Prof",
+				"ProfileSerializer\tclass"
+			],
+			[
+				"user",
+				"userprofile\tmodule"
+			],
+			[
+				"re",
+				"recruit\tscript"
+			],
+			[
+				"Rec",
+				"RecruitDetailComponent\talias"
+			],
+			[
+				"recruit",
+				"recruit-detail.component\tscript"
+			],
+			[
+				"pr",
+				"providers\tproperty"
+			],
+			[
+				"rec",
+				"recruitService\tproperty"
+			],
+			[
+				"recruit-c",
+				"recruit-list.component\tscript"
+			],
+			[
+				"template",
+				"templateUrl\tproperty"
+			],
+			[
+				"hero",
+				"heroService\tproperty"
+			],
+			[
+				"origin",
+				"origin_server\tparam"
+			],
+			[
+				"geo",
+				"geo_info\tstatement"
+			],
+			[
+				"or",
+				"origin_server\tstatement"
+			],
+			[
+				"ori",
+				"origin_server\tparam"
+			],
+			[
+				"dele",
+				"delete_cache_item"
+			],
+			[
+				"curr",
+				"current_hash_list\tstatement"
+			],
+			[
+				"cur",
+				"current_hash_list\tstatement"
+			],
+			[
+				"cli",
+				"client_response\tstatement"
+			],
+			[
+				"cache",
+				"cache"
+			],
+			[
+				"new",
+				"new_item\tstatement"
+			],
+			[
+				"net",
+				"new_item\tstatement"
+			],
+			[
+				"cac",
+				"cache\tstatement"
+			],
+			[
+				"set_ti",
+				"set_tight_layout"
+			],
+			[
+				"plot",
+				"plot_points\tstatement"
+			],
+			[
+				"set",
+				"set_title"
+			],
+			[
+				"err",
+				"error_array\tstatement"
+			],
+			[
+				"e",
+				"errors\tstatement"
+			],
+			[
+				"sig",
+				"sig_array2\tstatement"
+			],
+			[
+				"pure_arra",
+				"pure_array2\tstatement"
+			],
+			[
+				"noise_",
+				"noise_array2\tstatement"
+			],
+			[
+				"ber",
+				"ber_expected\tstatement"
+			],
+			[
+				"get",
+				"get_variance"
+			],
+			[
+				"lo",
+				"low_index\tstatement"
+			],
+			[
+				"ra",
+				"rand_num"
+			],
+			[
+				"cach",
+				"cache_usage_list\tstatement"
+			],
+			[
+				"clie",
+				"client_socket\tstatement"
+			],
+			[
+				"client",
+				"client_socket\tstatement"
+			],
+			[
+				"data",
+				"data_array\tstatement"
+			],
+			[
+				"AF",
+				"AF_INET\tinstance"
+			],
+			[
+				"redis_",
+				"redis_connection\tstatement"
+			],
+			[
+				"redis",
+				"Redis\timport"
+			],
+			[
+				"getho",
+				"gethostbyname\tfunction"
+			],
+			[
+				"red",
+				"redis_connection\tstatement"
+			],
+			[
+				"cl",
+				"client_socket\tstatement"
+			],
+			[
+				"a",
+				"append\tfunction"
+			],
+			[
+				"is",
+				"is_covered\tstatement"
+			],
+			[
+				"AP",
+				"AP_list"
+			],
+			[
+				"Ap",
+				"AP_list\tstatement"
+			],
+			[
+				"d",
+				"does_cover"
+			],
+			[
+				"point",
+				"point_y\tstatement"
+			],
+			[
+				"cov",
+				"covered_list\tparam"
+			],
+			[
+				"power_array_cu",
+				"power_array_current_max"
+			],
+			[
+				"power",
+				"power_array_current_min"
+			],
+			[
+				"chann",
+				"channel_freq"
+			],
+			[
+				"channel",
+				"channel_strength"
+			],
+			[
+				"to",
+				"tostring"
+			],
+			[
+				"chan",
+				"channel_strength"
+			],
+			[
+				"tcp",
+				"tcpreceived\tstatement"
+			],
+			[
+				"flo",
+				"flow1_drops\tstatement"
+			],
+			[
+				"flow",
+				"flow2_drops\tstatement"
+			],
+			[
+				"tot",
+				"total_latency2"
+			],
+			[
+				"bandwidth",
+				"bandwidth2"
+			],
+			[
+				"cbr",
+				"cbrRate"
+			],
+			[
+				"curre",
+				"current_bandwidth\tstatement"
+			],
+			[
+				"drop",
+				"dropped_packets\tstatement"
+			],
+			[
+				"trace",
+				"trace_file\tstatement"
+			],
+			[
+				"date",
+				"date_of_installation"
+			],
+			[
+				"Date",
+				"DateField\tclass"
+			],
+			[
+				"arm_si",
+				"arm_size_confirmed"
+			],
+			[
+				"arm",
+				"ARM_SIZE_CHOICES\tstatement"
+			],
+			[
+				"inst",
+				"installer_contact_information"
+			],
+			[
+				"sy",
+				"styleUrls\tproperty"
+			],
+			[
+				"const",
+				"constructor\tkeyword"
+			],
+			[
+				"Route",
+				"RouteConfig\talias"
+			],
+			[
+				"Her",
+				"HeroService\talias"
+			],
+			[
+				"Rout",
+				"ROUTER_PROVIDERS\talias"
+			],
+			[
+				"set_",
+				"set_password"
+			],
+			[
+				"chapt",
+				"chapter_name"
+			],
+			[
+				"Dom",
+				"DomainMixin"
+			],
+			[
+				"chap",
+				"chapter_name"
+			],
+			[
+				"can",
+				"can_respond_to_get\tstatement"
+			],
+			[
+				"CH",
+				"FILL_CHUNK_SIZE"
+			],
+			[
+				"raw",
+				"raw_msg\tstatement"
+			],
+			[
+				"msg",
+				"msg_raw\tstatement"
+			],
+			[
+				"prevl",
+				"prevLogTerm\tstatement"
+			],
+			[
+				"prev",
+				"prevLogTerm"
+			],
+			[
+				"time",
+				"timeoutlength\tstatement"
+			],
+			[
+				"current",
+				"currentterm"
+			],
+			[
+				"hear",
+				"hearFromLeader\tstatement"
+			],
+			[
+				"pre",
+				"prevLogIndex\tstatement"
+			],
+			[
+				"cutt",
+				"currentterm\tstatement"
+			],
+			[
+				"cu",
+				"currentterm\tstatement"
+			],
+			[
+				"tran",
+				"transactionlog\tstatement"
+			],
+			[
+				"tra",
+				"transactionlog\tstatement"
+			],
+			[
+				"boo",
+				"boolean_test\tstatement"
+			],
+			[
+				"ser",
+				"server_response_states"
+			],
+			[
+				"bo",
+				"boolean_test"
+			],
+			[
+				"b",
+				"boolean_test"
+			],
+			[
+				"bad",
+				"bad_index_list"
+			],
+			[
+				"transa",
+				"transactionlog"
+			],
+			[
+				"transac",
+				"transactions"
+			],
+			[
+				"MI",
+				"MID_log"
+			],
+			[
+				"tota",
+				"total_msgs\tstatement"
+			],
+			[
+				"prevlog",
+				"prevLogIndex"
+			],
+			[
+				"cand",
+				"candidate\tstatement"
+			],
+			[
+				"resp",
+				"response_msg\tstatement"
+			],
+			[
+				"lead",
+				"leaderCommit\tstatement"
+			],
+			[
+				"entry",
+				"entry_list\tstatement"
+			],
+			[
+				"lea",
+				"leader"
+			],
+			[
+				"fail",
+				"failing_servers\tstatement"
+			],
+			[
+				"append",
+				"append-entry-response"
+			],
+			[
+				"app",
+				"append-entry-response"
+			],
+			[
+				"comm",
+				"committed"
+			],
+			[
+				"MID",
+				"MID_log\tstatement"
+			],
+			[
+				"leader",
+				"leader\tstatement"
+			],
+			[
+				"currentt",
+				"currentterm\tstatement"
+			],
+			[
+				"le",
+				"lengthOfLog"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "var express = require('express');\nvar router = express.Router();\nvar User = require('../models/user')\n/* GET users listing. */\nrouter.get('/:id', function(req, res, next) {\n  res.send('respond with a resource');\n});\n\nmodule.exports = router;\n",
+			"file": "routes/users.js",
+			"file_size": 239,
+			"file_write_time": 131396979910000000,
+			"settings":
+			{
+				"buffer_size": 242,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/user.js",
+			"settings":
+			{
+				"buffer_size": 285,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/untitled.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/untitled.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 207.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"brow",
+				"SFTP: Browse Server…"
+			],
+			[
+				"bro",
+				"SFTP: Browse Server…"
+			],
+			[
+				"br",
+				"SFTP: Browse Server…"
+			],
+			[
+				"vir",
+				"Virtualenv: Activate"
+			],
+			[
+				"virt",
+				"Virtualenv: Activate"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"browse ",
+				"Preferences: Browse Packages"
+			],
+			[
+				"browse",
+				"Preferences: Browse Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"package control",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"anaconda ",
+				"Anaconda: Disable linting on this file"
+			]
+		],
+		"width": 388.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"kill ",
+			"django-admin.py changepassword",
+			"runserver",
+			"manage.py runserver",
+			"python manage.py runserver",
+			"cd",
+			"ls",
+			"python manage.py runserver",
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"asdf"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/matthewbrandman/ow_server",
+		"/Users/matthewbrandman/ow_server/config",
+		"/Users/matthewbrandman/ow_server/models",
+		"/Users/matthewbrandman/ow_server/routes"
+	],
+	"file_history":
+	[
+		"/Users/matthewbrandman/ow_server/models/user.js",
+		"/Users/matthewbrandman/overwatchSite/src/app/players/player.module.ts",
+		"/Users/matthewbrandman/ow_server/bin/www",
+		"/Users/matthewbrandman/ow_server/package.json",
+		"/Users/matthewbrandman/ow_server/config/passport.js",
+		"/Users/matthewbrandman/Downloads/10.1111%2Fj.1467-971X.2011.01737.x.txt",
+		"/Users/matthewbrandman/Downloads/mongodb-osx-x86_64-3.4.4/README",
+		"/Users/matthewbrandman/dentalfocus/core/static/views/add_lead_modal.html",
+		"/Users/matthewbrandman/overwatchSite/src/app/player-detail.component.ts",
+		"/Users/matthewbrandman/overwatchSite/src/systemjs.config.js",
+		"/Users/matthewbrandman/myoverwatch/myoverwatch/settings.pyc",
+		"/Users/matthewbrandman/myoverwatch/userprofile/models.py",
+		"/Users/matthewbrandman/myoverwatch/myoverwatch/settings.py",
+		"/Users/matthewbrandman/myoverwatch/myoverwatch/urls.pyc"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<current file>",
+			"",
+			"*.*",
+			"<current file>",
+			"*.*",
+			"/Users/matthewbrandman/rushmanager/templates/comments/comment_list.html",
+			"*.*",
+			"",
+			"/Users/matthewbrandman/Downloads/__jquery.tablesorter/themes/blue"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"develo",
+			"account",
+			"from",
+			"user",
+			"name",
+			"current_status",
+			"name",
+			"heroform",
+			"leadmodalin",
+			"sopix",
+			"cdn_name",
+			"10-",
+			"lock.a",
+			"server_socket",
+			"print",
+			"output.f",
+			"cs5",
+			"endpoint",
+			"print",
+			"compute",
+			",",
+			"argv",
+			"print",
+			"send_res",
+			"choose_fas",
+			"get_late",
+			"queue",
+			"build",
+			"quer",
+			"socket",
+			"port",
+			"53",
+			"new_fre",
+			"value",
+			"null",
+			"joins",
+			"choose_fa",
+			"thread",
+			"pure3",
+			"get_variance",
+			"cdn",
+			"6c",
+			"lua",
+			"Bandwidth:",
+			"andwidth:",
+			"Bandwidth: 7",
+			"bandwidth",
+			"verage CBR bandwidth at",
+			"Average TCP bandwidth at",
+			"Average CBR latency from source",
+			"Average TCP latency from",
+			"Average TCP bandwidth a",
+			"Average TCP latency",
+			"ropped TCP packets",
+			"Average CBR bandwidth",
+			"^\\n",
+			"\\n",
+			"^/",
+			"Average TCP latency",
+			"to",
+			"verage TCP bandwidth",
+			"during",
+			"RED",
+			"DropTail",
+			"RED",
+			"red",
+			"seconds",
+			"\\t",
+			"auto_f",
+			"d",
+			"instance",
+			"date ",
+			"date",
+			"x ",
+			"add",
+			"ng-repeat",
+			"leadeditinst",
+			"update",
+			"modalinstancecontro",
+			"edit",
+			"enter ",
+			"r",
+			"T",
+			"ó",
+			" ",
+			"8",
+			"12",
+			"k",
+			"0000 001",
+			"setting",
+			"styles.css",
+			"getHeroes",
+			"reset_to",
+			"to_inter",
+			"organization",
+			"autocom",
+			"Rushperiod",
+			"organization",
+			"auto",
+			"foreign",
+			"organ",
+			"sameorg",
+			"organization",
+			"get_us",
+			"'organization'",
+			"organization = ",
+			"get_u",
+			"domain",
+			"organization_d",
+			"django_te",
+			"django_",
+			"django_te",
+			"tenant",
+			"django-tenants",
+			"correctorg",
+			"tenant_objects",
+			"tenant_ob",
+			"_thread_lo",
+			"70",
+			"tenant",
+			".*tenancy.*",
+			"*tenancy*",
+			"tenancy",
+			"organization",
+			"dj_data",
+			"min",
+			"dead",
+			"'get'"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"legacy",
+			"current_status",
+			"entering_semester",
+			"legacy",
+			"current_status",
+			"entering_semester",
+			"entering_year",
+			"None",
+			"id",
+			"",
+			"DropTail",
+			"RED",
+			"DropTail",
+			"RED",
+			"    ",
+			"f",
+			"7",
+			"6",
+			"",
+			"objects",
+			"70",
+			"datetime.datetime.now()",
+			"",
+			"tenant_objects",
+			"objects",
+			"rushId",
+			"x",
+			"user.organization",
+			"from rushtracker.models import Rush",
+			"from authentication.models import UserProfile",
+			"",
+			"rush."
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "routes/users.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 242,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								172,
+								172
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "models/user.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 179.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 115.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "express_ow.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"core/",
+				"rushtracker/static/core/mainController.js"
+			],
+			[
+				"index",
+				"templates/rushtracker/index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 227.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"finish"
+			]
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 224.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
