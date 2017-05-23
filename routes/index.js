@@ -46,17 +46,19 @@ module.exports = function(io) {
 
     //search for user in queue.  If not there add and respond 
     //if user is there respond same but do not re-add
-    QueueEntry.findOne({'user': socket.decoded_token.id}, function(err, qe) {
-      if (err) {
-        return done(err, false);
-      }
-      if (qe) {
-        socket.emit('message', {data: 'in queue (already queued)'});
-      } else {
-        var queueEntry = new QueueEntry({user: socket.decoded_token.id});
-        queueEntry.save(function(err) { if (err) console.log(err); });
-        socket.emit('message', {data: 'in queue'});
-      }
+    socket.on('message', function(data) {
+      QueueEntry.findOne({'user': socket.decoded_token.id}, function(err, qe) {
+        if (err) {
+          return done(err, false);
+        }
+        if (qe) {
+          socket.emit('message', {data: 'in queue'});
+        } else {
+          var queueEntry = new QueueEntry({user: socket.decoded_token.id, 'socketId': socket.id, 'status': 'waiting'});
+          queueEntry.save(function(err) { if (err) console.log(err); });
+          socket.emit('message', {data: 'in queue'});
+        }
+      });
     });
 
   })

@@ -20,7 +20,8 @@ var io = socket_io();
 app.io = io;
 
 var index = require('./routes/index')(io);
-
+var kue = require('./config/kue-tasks')(io);
+var match = require('./routes/match'); 
 
 app.use(passport.initialize());
 passport.use(new LocalStrategy(User.authenticate()));
@@ -64,6 +65,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/match', match);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
