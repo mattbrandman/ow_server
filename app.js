@@ -18,9 +18,7 @@ var app = express();
 
 var io = socket_io();
 app.io = io;
-
 var index = require('./routes/index')(io);
-var kue = require('./config/kue-tasks')(io);
 var match = require('./routes/match'); 
 
 app.use(passport.initialize());

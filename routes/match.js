@@ -6,9 +6,14 @@ var mongoose = require('mongoose');
 
 /* GET users listing. */
 router.get('/', passport.authenticate('jwt', {session: false}), function(req, res, next) {
-	Match.findOne({$or: [{'teamA.user': new mongoose.mongo.ObjectID(req.user)},
-										{'teamB.user': new mongoose.mongo.ObjectID(req.user)},
-										]}, function(data) {console.log(data); res.json(data);});
+	var s = new mongoose.mongo.ObjectID(req.user._id)
+	console.log(s);
+	Match.findOne(
+		{'players.userID': s},
+		function(err, data) {
+			console.log(data); 
+			res.json(data);
+		});
 });
 
 module.exports = router;

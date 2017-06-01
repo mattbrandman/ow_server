@@ -1,8 +1,9 @@
 var express = require('express');
 var passport = require('passport');
 var User = require('../models/user');
-var QueueEntry = require('../models/queue-entry');
+var Match = require('../models/match');
 var router = express.Router();
+var pugGame = require('../game-code/pug-game');
 
 var jwt = require('jsonwebtoken');
 var socketioJwt = require("socketio-jwt");
@@ -17,7 +18,7 @@ router.post('/register', function(req, res) {
     }
 
     passport.authenticate('local')(req, res, function () {
-      var payload = {id: req.user.id};
+      var payload = {id: req.user.id, username: req.user.username};
       var token = jwt.sign(payload, secretKey);
       res.json({message: "ok", token: token});
     });
@@ -25,7 +26,7 @@ router.post('/register', function(req, res) {
 });
 
 router.post('/login', passport.authenticate('local'), function(req, res) {
-  var payload = {id: req.user.id};
+  var payload = {id: req.user.id, username: req.user.username};
   var token = jwt.sign(payload, secretKey);
   res.json({message: req.user.id, token: token});
 });
@@ -34,6 +35,23 @@ router.get('/profile', passport.authenticate('jwt', {session: false}), function(
   res.json({message: "success", user: req.user});
 });
 
+
+function findMatch() {
+  var match = Match.findAsync({'status': 'incomplete'});
+  return match
+}
+
+function checkExisting(userId) {
+  var userPromise = User.findByIdAsync(userId);
+  return userPromise.then(function(data) {
+    console.log(Number(data.currentGame));
+    if(data.status == 'inQueue' && Number(data.currentGame) > 0) {
+       return {response: {status: data.status, game: data.currentGame}};
+    } else {
+      return {response: {status: data.status, game: data.currentGame}};
+    }
+  });
+}
 
 
 module.exports = function(io) {
@@ -46,21 +64,33 @@ module.exports = function(io) {
 
     //search for user in queue.  If not there add and respond 
     //if user is there respond same but do not re-add
-    socket.on('message', function(data) {
-      QueueEntry.findOne({'user': socket.decoded_token.id}, function(err, qe) {
-        if (err) {
-          return done(err, false);
-        }
-        if (qe) {
-          socket.emit('message', {data: 'in queue'});
+    socket.once('joinQueue', function(data) {
+      var firstPromise =  checkExisting(socket.decoded_token.id)
+      var findMatchPromise = firstPromise.then(function(data) {
+        console.log(JSON.stringify(data));
+        if (data.response.status == 'inQueue' && Number(data.response.game) > 0) {
+          socket.emit('inQueue');
+          socket.join(data.currentGame);
+          console.log('no');
+/*          
+          CAN BE USED TO TARGET PLAYER IN ARRAY IN UPDATE
+          Match.update({roomName: data.currentGame, "players.userID": socket.decoded_token.id}
+                       {$set: { "players.$."}})*/
+          return true
         } else {
-          var queueEntry = new QueueEntry({user: socket.decoded_token.id, 'socketId': socket.id, 'status': 'waiting'});
-          queueEntry.save(function(err) { if (err) console.log(err); });
-          socket.emit('message', {data: 'in queue'});
+          return findMatch()
         }
       });
-    });
-
+      findMatchPromise.then(function(data) {
+        if (data == true) {
+          return;
+        } else if(data.length == 0) {
+          pugGame.initGame(socket);
+        } else {
+          var game = pugGame.requestJoin(socket, data[0], io);
+        }
+      });
+    })
   })
   .on('unauthorized', function(msg) {
       console.log("unauthorized: " + JSON.stringify(msg.data));
