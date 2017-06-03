@@ -47,7 +47,7 @@ var PugGame = {
 		var player = {
 			userID: new mongoose.mongo.ObjectId(user.id),
 			username: user.username,
-			team: 1
+			team: team
 		}
 		var promise =	Match.updateAsync(
 										{_id: match._id, players: {$size: match.players.length}},
@@ -106,13 +106,8 @@ var PugGame = {
 	startGame: function(match, io) {
 		var match = match;
 		var io = io;
+		User.updateManyAsync({currentGame: Number(match.roomName)}, {status: 'InGame'});
 		io.in(match.roomName).emit('gameStarted');
-		io.of('/').in(match.roomName).clients(function(error, clients){
-			clients.forEach(function(client) { 
-				var currentSocket = io.of('/').connected[client]
-			})
-		})
-
 	}
 }
 

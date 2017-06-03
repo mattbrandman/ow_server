@@ -44,12 +44,7 @@ function findMatch() {
 function checkExisting(userId) {
   var userPromise = User.findByIdAsync(userId);
   return userPromise.then(function(data) {
-    console.log(Number(data.currentGame));
-    if(data.status == 'inQueue' && Number(data.currentGame) > 0) {
        return {response: {status: data.status, game: data.currentGame}};
-    } else {
-      return {response: {status: data.status, game: data.currentGame}};
-    }
   });
 }
 
@@ -60,18 +55,18 @@ module.exports = function(io) {
     timeout: 15000 // 15 seconds to send the authentication message
   }))
   .on('authenticated', function(socket) {
+    console.log('logged in');
     //this socket is authenticated, we are good to handle more events from it.
 
     //search for user in queue.  If not there add and respond 
     //if user is there respond same but do not re-add
-    socket.once('joinQueue', function(data) {
+    socket.on('joinQueue', function(data) {
       var firstPromise =  checkExisting(socket.decoded_token.id)
       var findMatchPromise = firstPromise.then(function(data) {
-        console.log(JSON.stringify(data));
         if (data.response.status == 'inQueue' && Number(data.response.game) > 0) {
           socket.emit('inQueue');
           socket.join(data.currentGame);
-          console.log('no');
+          console.log('Already in Queue');
 /*          
           CAN BE USED TO TARGET PLAYER IN ARRAY IN UPDATE
           Match.update({roomName: data.currentGame, "players.userID": socket.decoded_token.id}
@@ -92,10 +87,6 @@ module.exports = function(io) {
       });
     })
   })
-  .on('unauthorized', function(msg) {
-      console.log("unauthorized: " + JSON.stringify(msg.data));
-      throw new Error(msg.data.type);
-    });
   return router;
 
 }

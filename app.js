@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var bodyParser = require('body-parser')
 
 var passportJWT = require("passport-jwt");
 var User = require('./models/user');
@@ -22,6 +23,7 @@ var index = require('./routes/index')(io);
 var match = require('./routes/match'); 
 
 app.use(passport.initialize());
+app.use(bodyParser.json());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
