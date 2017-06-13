@@ -3,6 +3,7 @@ var router = express.Router();
 var Match = require('../models/match');
 var passport = require('passport');
 var mongoose = require('mongoose');
+var gameController = require('../game-code/pug-game');
 
 /* GET users listing. */
 router.get('/', passport.authenticate('jwt', { session: false }), function(req, res, next) {
@@ -15,13 +16,22 @@ router.get('/', passport.authenticate('jwt', { session: false }), function(req, 
       });
 });
 
-module.exports = router;
 
 router.post('/vote', passport.authenticate('jwt', { session: false }), function(req, res) {
-	  var votePromise = Match.updateAsync(
-	  	{ roomName: req.user.currentGame, "players.userID": req.user._id }, 
-	  	{ $set: { "players.$.vote": req.body.winning_team } },
-	    function(err, data) {
-	    	res.json({response: 'Vote Accepted'})
-	    });
+    var req = req;
+    setTimeout(function(){ gameController.endGame(req.user.currentGame, req.app.io)}, 5000);
+	  var votePromise = Match.findOneAndUpdateAsync(
+	  	{ roomName: req.user.currentGame, "players.userID": req.user._id, ended: false }, 
+	  	{ $set: { "players.$.vote": req.body.winning_team }, $inc: {votes: 1} },
+      { new: true });
+    votePromise.then(function(data)
+    {
+      if (true) {
+        
+      }
+      res.json({response: 'Vote Accepted'})
+    });
 });
+
+
+module.exports = router;

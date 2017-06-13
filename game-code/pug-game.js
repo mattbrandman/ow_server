@@ -108,6 +108,18 @@ var PugGame = {
 		var io = io;
 		User.updateManyAsync({currentGame: Number(match.roomName)}, {status: 'InGame'});
 		io.in(match.roomName).emit('gameStarted');
+	},
+
+	endGame: function(roomName, io) {
+		var io = io;
+		console.log('ending');
+		var roomNameParam = roomName;
+		var room = roomName.toString();
+		var matchCompletePromise = Match.updateAsync({roomName: roomNameParam}, {status: 'complete'});
+		matchCompletePromise.then(function(data) {
+			User.updateManyAsync({currentGame: roomName}, {ended: true, currentGame: -1});
+			io.emit('gameOver');
+		});
 	}
 }
 

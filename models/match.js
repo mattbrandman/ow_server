@@ -14,10 +14,12 @@ var Match = new Schema(
 		  		team: {type: Number, enum: [1, 2]}
 		  	}
 	  	],
-	  status: {type: String, enum: ['complete', 'incomplete']},
+	  status: {type: String, enum: ['complete', 'incomplete'], default: 'incomplete'},
 	  roomName: Number,
 	  teamOneSize: Number,
 	  teamTwoSize: Number,
+	  votes: {type: Number, default: 0},
+	  ended: {type: Boolean, default: false}
 	 },
 	{
 		timestamps: {createdAt: 'created_at'}
