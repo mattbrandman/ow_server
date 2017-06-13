@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"mat",
+				"matchCompletePromise"
+			],
+			[
+				"roo",
+				"roomNameParam"
+			],
+			[
+				"room",
+				"roomName"
+			],
+			[
+				"fin",
+				"findOneAndUpdateAsync"
+			],
+			[
+				"vote",
+				"votePromise"
+			],
+			[
 				"res",
 				"response"
 			],
@@ -18,10 +38,6 @@
 			[
 				"sta",
 				"status"
-			],
-			[
-				"roo",
-				"roomName"
 			],
 			[
 				"cu",
@@ -58,10 +74,6 @@
 			[
 				"ma",
 				"matchPromise"
-			],
-			[
-				"fin",
-				"findMatchPromise"
 			],
 			[
 				"find",
@@ -502,18 +514,6 @@
 			[
 				"pre",
 				"prevLogIndex\tstatement"
-			],
-			[
-				"cutt",
-				"currentterm\tstatement"
-			],
-			[
-				"tran",
-				"transactionlog\tstatement"
-			],
-			[
-				"tra",
-				"transactionlog\tstatement"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "routes/index.js",
 			"settings":
 			{
-				"buffer_size": 3151,
+				"buffer_size": 3266,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -540,8 +540,16 @@
 			"file": "game-code/pug-game.js",
 			"settings":
 			{
-				"buffer_size": 3561,
+				"buffer_size": 3961,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/match.js",
+			"settings":
+			{
+				"buffer_size": 748,
 				"line_ending": "Unix"
 			}
 		},
@@ -549,17 +557,7 @@
 			"file": "routes/match.js",
 			"settings":
 			{
-				"buffer_size": 906,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app.js",
-			"settings":
-			{
-				"buffer_size": 2461,
-				"encoding": "UTF-8",
+				"buffer_size": 1187,
 				"line_ending": "Unix"
 			}
 		}
@@ -752,16 +750,18 @@
 	[
 		"/Users/matthewbrandman/ow_server",
 		"/Users/matthewbrandman/ow_server/bin",
-		"/Users/matthewbrandman/ow_server/game-code",
 		"/Users/matthewbrandman/ow_server/models",
 		"/Users/matthewbrandman/ow_server/routes",
 		"/Users/matthewbrandman/ow_server/views"
 	],
 	"file_history":
 	[
+		"/Users/matthewbrandman/ow_server/routes/match.js",
+		"/Users/matthewbrandman/ow_server/models/match.js",
+		"/Users/matthewbrandman/ow_server/routes/users.js",
+		"/Users/matthewbrandman/ow_server/app.js",
 		"/Users/matthewbrandman/ow_server/node_modules/socketio-jwt/lib/index.js",
 		"/Users/matthewbrandman/ow_server/node_modules/socket.io/lib/namespace.js",
-		"/Users/matthewbrandman/ow_server/models/match.js",
 		"/Users/matthewbrandman/ow_server/node_modules/socket.io/lib/index.js",
 		"/Users/matthewbrandman/ow_server/node_modules/component-emitter/index.js",
 		"/Users/matthewbrandman/ow_server/node_modules/eventemitter2/lib/eventemitter2.js",
@@ -770,14 +770,11 @@
 		"/Users/matthewbrandman/ow_server/node_modules/websocket-driver/lib/websocket/driver.js",
 		"/Users/matthewbrandman/ow_server/node_modules/socket.io/lib/client.js",
 		"/Users/matthewbrandman/ow_server/models/user.js",
-		"/Users/matthewbrandman/ow_server/routes/match.js",
 		"/Users/matthewbrandman/ow_server/game-code/pug-game.js",
-		"/Users/matthewbrandman/ow_server/app.js",
 		"/Users/matthewbrandman/ow_server/bin/www",
 		"/Users/matthewbrandman/ow_server/node_modules/mongoose/node_modules/mquery/lib/utils.js",
 		"/Users/matthewbrandman/ow_server/models/queue-entry.js",
 		"/Users/matthewbrandman/ow_server/config/kue-tasks.js",
-		"/Users/matthewbrandman/ow_server/routes/users.js",
 		"/Users/matthewbrandman/ow_server/config/kue-tasks.py",
 		"/Users/matthewbrandman/ow_server/node_modules/express/lib/express.js",
 		"/Users/matthewbrandman/ow_server/node_modules/passport-jwt/lib/strategy.js",
@@ -823,6 +820,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"complete",
+			"compl",
 			".update",
 			"emit",
 			"adapter",
@@ -948,9 +947,7 @@
 			"ng-repeat",
 			"leadeditinst",
 			"update",
-			"modalinstancecontro",
-			"edit",
-			"enter "
+			"modalinstancecontro"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1011,15 +1008,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3151,
+						"buffer_size": 3266,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2561,
-								2561
+								2088,
+								2088
 							]
 						],
 						"settings":
@@ -1038,16 +1035,16 @@
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 587.0,
+						"translation.y": 787.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
 					"file": "models/user.js",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 647,
@@ -1081,15 +1078,53 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3561,
+						"buffer_size": 3961,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2568,
-								2568
+								3127,
+								3127
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 2,
+								"tabSize": 2
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 1147.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "models/match.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 748,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								17
 							]
 						],
 						"settings":
@@ -1101,66 +1136,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 945.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "routes/match.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 906,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								557,
-								557
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 2,
-								"tabSize": 2
-							}
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "app.js",
+					"file": "routes/match.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2461,
+						"buffer_size": 1187,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								748,
-								748
+								924,
+								924
 							]
 						],
 						"settings":

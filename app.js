@@ -14,12 +14,14 @@ var passportJWT = require("passport-jwt");
 var User = require('./models/user');
 
 var users = require('./routes/users');
+var ioInit = require('./game-code/ow-socket-init')
 
 var app = express();
 
 var io = socket_io();
+ioInit(io);
 app.io = io;
-var index = require('./routes/index')(io);
+var index = require('./routes/index');
 var match = require('./routes/match'); 
 
 app.use(passport.initialize());

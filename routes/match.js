@@ -19,15 +19,14 @@ router.get('/', passport.authenticate('jwt', { session: false }), function(req, 
 
 router.post('/vote', passport.authenticate('jwt', { session: false }), function(req, res) {
     var req = req;
-    setTimeout(function(){ gameController.endGame(req.user.currentGame, req.app.io)}, 5000);
 	  var votePromise = Match.findOneAndUpdateAsync(
 	  	{ roomName: req.user.currentGame, "players.userID": req.user._id, ended: false }, 
 	  	{ $set: { "players.$.vote": req.body.winning_team }, $inc: {votes: 1} },
       { new: true });
     votePromise.then(function(data)
     {
-      if (true) {
-        
+      if (data.votes == 1) {
+        setTimeout(function(){ gameController.endGame(req.user.currentGame, req.app.io)}, 5000);
       }
       res.json({response: 'Vote Accepted'})
     });

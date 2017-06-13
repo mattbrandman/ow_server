@@ -115,9 +115,27 @@ var PugGame = {
 		console.log('ending');
 		var roomNameParam = roomName;
 		var room = roomName.toString();
-		var matchCompletePromise = Match.updateAsync({roomName: roomNameParam}, {status: 'complete'});
+		/*
+		Map Reduce Function to determine vote counts
+		*/
+		var o = {};
+		o.map = function () {
+			this.players.forEach(function(player){
+				emit(player.vote, 1);
+			})
+		}
+		o.reduce = function (k, vals) {
+			return vals.length
+		}
+		o.query = {roomName: roomNameParam};
+		Match.mapReduce(o, function (err, results) {
+			if(err) throw err;
+			console.log(results)
+		})
+
+		var matchCompletePromise = Match.updateAsync({roomName: roomNameParam}, {ended: true});
 		matchCompletePromise.then(function(data) {
-			User.updateManyAsync({currentGame: roomName}, {ended: true, currentGame: -1});
+			User.updateManyAsync({currentGame: roomName}, {status: 'none', currentGame: -1});
 			io.emit('gameOver');
 		});
 	}
