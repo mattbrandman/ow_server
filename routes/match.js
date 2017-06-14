@@ -9,7 +9,7 @@ var gameController = require('../game-code/pug-game');
 router.get('/', passport.authenticate('jwt', { session: false }), function(req, res, next) {
     var userId = new mongoose.mongo.ObjectID(req.user._id)
     Match.findOne(
-    	{ 'players.userID': userId },
+    	{ 'players.userID': userId, 'roomName': req.user.currentGame },
       'players.userID players.username players.team',
       function(err, data) {
           res.json(data);
