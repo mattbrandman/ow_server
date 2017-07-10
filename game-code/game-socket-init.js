@@ -17,14 +17,11 @@ function gSInit(socket) {
 		var match;
 		matchPromise.then(function(data){
 			if (data == null) {
-				console.log('here');
 				return true
 			} else {
 				match = data;
 			}
 			if (readyHashTable[match.roomName] == null){
-				console.log(readyHashTable);
-				console.log('heress');
 				var readyClass = new ReadyClass();
 				readyClass.readyChecks.push(userId);
 				readyHashTable[match.roomName] = readyClass;

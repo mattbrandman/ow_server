@@ -88,7 +88,6 @@ var PugGame = {
 	},
 
 	startGame: function(match) {
-		console.log(match);
 		clearTimeout(cancelTimer);
 		var match = match;
 		var startPromise = User.updateManyAsync({currentGame: Number(match.roomName)}, {status: 'InGame'});

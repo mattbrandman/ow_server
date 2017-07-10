@@ -35,8 +35,7 @@ module.exports = function() {
       if (data.status != 'none' && data.currentGame != -1) {
         socket.join(data.currentGame);
       }
-/*      socket.ow = {};
-      socket.ow.user = data;*/
+
       gSInit(socket);
 
     //this socket is authenticated, we are good to handle more events from it.
