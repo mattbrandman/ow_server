@@ -1,4 +1,4 @@
-var ReadyClass = require('../game-code/ready-class');
+/*var ReadyClass = require('../game-code/ready-class');
 var mongoose = require('mongoose');
 var Match = require('../models/match');
 var User = require('../models/user');
@@ -38,4 +38,4 @@ function gSInit(socket) {
 	});
 }
 
-module.exports = gSInit;
+module.exports = gSInit;*/

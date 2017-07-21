@@ -21,8 +21,7 @@ var io = socket_io();
 app.io = io;
 module.exports = app;
 
-var ioInit = require('./game-code/ow-socket-init')();
-
+var gameServer = require('./game-code/pug-game')
 var index = require('./routes/index');
 var match = require('./routes/match'); 
 

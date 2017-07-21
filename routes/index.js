@@ -7,6 +7,7 @@ var pugGame = require('../game-code/pug-game');
 var mongoose = require('mongoose');
 var jwt = require('jsonwebtoken');
 var socketioJwt = require("socketio-jwt");
+var socketManager = require("../game-code/socketio-manager");
 secretKey = 'teatime';
 
 
