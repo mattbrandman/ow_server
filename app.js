@@ -54,7 +54,7 @@ passport.use(new JwtStrategy(jwtOptions, function(jwt_payload, done) {
     });
 }));
 
-mongoose.connect('mongodb://localhost/test')
+mongoose.connect('mongodb://farid:harris23@ds117093.mlab.com:17093/ow_server_database')
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
