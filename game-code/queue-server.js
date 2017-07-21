@@ -2,6 +2,24 @@ var queueItem = require('../models/queue-item');
 var match = require('../models/match');
 const EventEmitter = require('events')
 const util = require('util')
+const MAP_ARRAY = [
+'Hanamura',
+'Horizon Lunar Colony',
+'Temple of Anubis',
+'Volskaya Industries',
+'Dorado',
+'Route 66',
+'Watchpoint: Gibraltar',
+'Eichenwalde',
+'Hollywood',
+'Kings Row',
+'Numbani',
+'Ilios',
+'Lijiang Tower',
+'Nepal',
+'Oasis',
+];
+const MAP_POOL_SIZE = 15;
 
 class QueueServer extends EventEmitter {
 	constructor () {
@@ -46,8 +64,10 @@ class QueueServer extends EventEmitter {
 			}
 		}
 		var gameName = Math.floor((Math.random() * 100) + 1);
+		var randomMap = Math.floor(Math.random() * 14);
+		var gameMap = MAP_ARRAY[randomMap]
 		console.log({Game: {Team1: team1, Team2: team2, name: gameName.toString()}});
-		this.emit('new-game', {Game: {Team1: team1, Team2: team2, name: gameName.toString()}});
+		this.emit('new-game', {Game: {Team1: team1, Team2: team2, name: gameName.toString(), map: gameMap}});
 	}
 
 }
