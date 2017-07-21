@@ -4,11 +4,14 @@ var socketioJwt = require("socketio-jwt");
 var User = require('../models/user');
 var queueItem = require('../models/queue-item');
 var mongoose = require('mongoose');
+
+const EventEmitter = require('events')
 secretKey = 'teatime';
 
-class SocketManager{
+class SocketManager extends EventEmitter{
 
     constructor() {
+        super()
         this.socketMap = {};
         this.roomMap = {};
         io.on('connection', socketioJwt.authorize({
@@ -20,11 +23,12 @@ class SocketManager{
                 console.log(socket.id);
                 console.log('logged in');
                 this.map_userId_socket(socket.decoded_token.id, socket);
-                socket.on('joinQueue', function(data) {
-                    queueItem.createAsync({ user: new mongoose.mongo.ObjectId(socket.decoded_token.id) });
+                socket.on('joinQueue', (data) => {
+                    this.emit('newQueueItem', socket);
                 });
             })
     }
+    // should be moved at a later date to the queue server
 
     reconnect(socket, userId) {
         if (this.roomMap[userId.toString()] != undefined) {
@@ -44,12 +48,18 @@ class SocketManager{
 
     join_room(user, room) {
     	this.socketMap[user.id.toString()].join(room);
-        this.roomMap[user.id.toString()] = (this.roomMap[user.id.toString()] || []).push(room.toString());
+        var rooms = this.roomMap[user.id.toString()];
+        if (rooms == undefined) {
+            this.roomMap[user.id.toString()] = []
+            this.roomMap[user.id.toString()].push(room)
+        } else {
+            this.roomMap[user.id.toString()].push(room);
+        }
     }
 
     leave_room(user, room) {
     	this.socketMap[user.id.toString()].leave(room);
-        var index = roomMap[user.id.toString()].indexOf(room.toString());
+        var index = this.roomMap[user.id.toString()].indexOf(room.toString());
         if (index > -1) {
             roomMap[user.id.toString()].splice(index, 1);
         }

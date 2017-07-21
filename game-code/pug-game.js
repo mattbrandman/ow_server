@@ -4,19 +4,20 @@ var User = require('../models/user');
 var Promise = require('bluebird'); 
 var QueueServer = require('../game-code/queue-server');
 var socketManager = require('../game-code/socketio-manager');
+var queueItem = require('../models/queue-item');
 
 class GameServer {
 	constructor() {
 		this.queueServer = QueueServer;
 		this.gameList = {};
 		this.queueServer.on('new-game', game => this.newGame(game));
+		socketManager.on('newQueueItem', socket => this.new_queue_item(socket));
 		this.userToGameList = {}
 	}
 
 	newGame(game) {
-		this.gameList[game.Game['name']] = game.Game
-		console.log('here');
 		this.game = game.Game;
+		this.gameList[game.Game['name']] = this.game;
 		this.game['vote1'] = 0
 		this.game['vote2'] = 0
 		for(var i=0; i < this.game['Team1'].length; i++) {
@@ -30,11 +31,7 @@ class GameServer {
 
 	game_vote(user, vote) {
 		var gameName = this.userToGameList[user.id.toString()]
-		console.log('xxx')
-		console.log(gameName)
 		var game = this.gameList[gameName.toString()]
-		console.log(this.gameList);
-		console.log(game);
 		if (vote == 1 ) {
 			game['vote1'] += 1
 		} else if (vote == 2) {
@@ -63,9 +60,34 @@ class GameServer {
 		delete this.gameList[game['name'].toString()]
 	}
 
+    new_queue_item(socket) {
+        var dbUserId = new mongoose.mongo.ObjectId(socket.decoded_token.id)
+        var latestGame = this.userToGameList[socket.decoded_token.id.toString()]
+        console.log(latestGame);
+        if (latestGame != undefined) {
+        	var existingGame = this.gameList[latestGame.toString()]
+        	console.log(existingGame);
+        	console.log('yyyy')
+        	console.log(this.gameList);
+        } else {
+        	var existingGame = undefined
+        }
+        if (existingGame == undefined) {
+            var check_existing = queueItem.findOneAsync({user: dbUserId})
+            
+            check_existing.then(function(data) {
+                if (data == null) {
+                    queueItem.createAsync({ user: new mongoose.mongo.ObjectId(socket.decoded_token.id) });
+                } 
+            });
+        } else {
+            socket.emit('gameStart', existingGame);
+        }
+    }
+
 }
-var gsInstance = new GameServer();
-module.exports = gsInstance;
+
+module.exports = new GameServer();
 
 
 
