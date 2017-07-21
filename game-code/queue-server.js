@@ -48,7 +48,6 @@ class QueueServer extends EventEmitter {
 					})
 				}
 			} else {
-				console.log(players);
 			}
 		})
 	}
