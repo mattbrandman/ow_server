@@ -59,7 +59,7 @@ class GameServer {
 		} else if (game.vote3 > game.vote1 && game.vote3 > game.vote2) {
 			winner = 3
 		}
-x
+		
 		var innerGame = game.Game;
 		var Team1 = game.Team1
 		var Team2 = game.Team2
