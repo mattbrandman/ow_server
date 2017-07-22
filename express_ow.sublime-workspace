@@ -4,32 +4,92 @@
 		"selected_items":
 		[
 			[
+				"user",
+				"userPromise"
+			],
+			[
+				"matc",
+				"matchPromise"
+			],
+			[
+				"rea",
+				"readyHashTable"
+			],
+			[
+				"gam",
+				"game-code"
+			],
+			[
+				"read",
+				"readyHashTable"
+			],
+			[
+				"ro",
+				"roomName"
+			],
+			[
+				"Ready",
+				"ReadyClass"
+			],
+			[
+				"winning",
+				"winningTeam"
+			],
+			[
+				"pr",
+				"promiseArray"
+			],
+			[
+				"w",
+				"winningTeam"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"up",
+				"updateManyAsync"
+			],
+			[
+				"wi",
+				"winningTeamValue"
+			],
+			[
 				"res",
-				"response"
+				"result"
+			],
+			[
+				"mat",
+				"matchCompletePromise"
+			],
+			[
+				"roo",
+				"roomNameParam"
+			],
+			[
+				"room",
+				"roomName"
+			],
+			[
+				"fin",
+				"findOneAndUpdateAsync"
+			],
+			[
+				"vote",
+				"votePromise"
 			],
 			[
 				"ca",
 				"cancelTimer"
 			],
 			[
-				"rea",
-				"readyUsers"
-			],
-			[
 				"sta",
 				"status"
 			],
 			[
-				"roo",
-				"roomName"
-			],
-			[
 				"cu",
 				"currentGame"
-			],
-			[
-				"for",
-				"for\tfor (…) {…}"
 			],
 			[
 				"us",
@@ -52,16 +112,8 @@
 				"teamTwoSize"
 			],
 			[
-				"user",
-				"username"
-			],
-			[
 				"ma",
 				"matchPromise"
-			],
-			[
-				"fin",
-				"findMatchPromise"
 			],
 			[
 				"find",
@@ -166,10 +218,6 @@
 			[
 				"recruit",
 				"recruit-detail.component\tscript"
-			],
-			[
-				"pr",
-				"providers\tproperty"
 			],
 			[
 				"rec",
@@ -466,73 +514,26 @@
 			[
 				"can",
 				"can_respond_to_get\tstatement"
-			],
-			[
-				"CH",
-				"FILL_CHUNK_SIZE"
-			],
-			[
-				"raw",
-				"raw_msg\tstatement"
-			],
-			[
-				"msg",
-				"msg_raw\tstatement"
-			],
-			[
-				"prevl",
-				"prevLogTerm\tstatement"
-			],
-			[
-				"prev",
-				"prevLogTerm"
-			],
-			[
-				"time",
-				"timeoutlength\tstatement"
-			],
-			[
-				"current",
-				"currentterm"
-			],
-			[
-				"hear",
-				"hearFromLeader\tstatement"
-			],
-			[
-				"pre",
-				"prevLogIndex\tstatement"
-			],
-			[
-				"cutt",
-				"currentterm\tstatement"
-			],
-			[
-				"tran",
-				"transactionlog\tstatement"
-			],
-			[
-				"tra",
-				"transactionlog\tstatement"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "routes/index.js",
+			"file": "game-code/game-socket-init.js",
 			"settings":
 			{
-				"buffer_size": 3151,
+				"buffer_size": 1265,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "models/user.js",
+			"file": "game-code/ow-socket-init.js",
 			"settings":
 			{
-				"buffer_size": 647,
+				"buffer_size": 2478,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -540,25 +541,15 @@
 			"file": "game-code/pug-game.js",
 			"settings":
 			{
-				"buffer_size": 3561,
-				"encoding": "UTF-8",
+				"buffer_size": 4812,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "routes/match.js",
+			"file": "config/game-config.js",
 			"settings":
 			{
-				"buffer_size": 906,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app.js",
-			"settings":
-			{
-				"buffer_size": 2461,
+				"buffer_size": 58,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -752,6 +743,7 @@
 	[
 		"/Users/matthewbrandman/ow_server",
 		"/Users/matthewbrandman/ow_server/bin",
+		"/Users/matthewbrandman/ow_server/config",
 		"/Users/matthewbrandman/ow_server/game-code",
 		"/Users/matthewbrandman/ow_server/models",
 		"/Users/matthewbrandman/ow_server/routes",
@@ -759,25 +751,28 @@
 	],
 	"file_history":
 	[
+		"/Users/matthewbrandman/ow_server/game-code/ready-class.js",
+		"/Users/matthewbrandman/ow_server/game-code/pug-game.js",
+		"/Users/matthewbrandman/ow_server/routes/match.js",
+		"/Users/matthewbrandman/ow_server/game-code/ow-socket-init.js",
+		"/Users/matthewbrandman/ow_server/game-code/game-socket-init.js",
+		"/Users/matthewbrandman/ow_server/app.js",
+		"/Users/matthewbrandman/ow_server/bin/www",
+		"/Users/matthewbrandman/ow_server/routes/index.js",
+		"/Users/matthewbrandman/ow_server/models/user.js",
+		"/Users/matthewbrandman/ow_server/models/match.js",
+		"/Users/matthewbrandman/ow_server/routes/users.js",
 		"/Users/matthewbrandman/ow_server/node_modules/socketio-jwt/lib/index.js",
 		"/Users/matthewbrandman/ow_server/node_modules/socket.io/lib/namespace.js",
-		"/Users/matthewbrandman/ow_server/models/match.js",
 		"/Users/matthewbrandman/ow_server/node_modules/socket.io/lib/index.js",
 		"/Users/matthewbrandman/ow_server/node_modules/component-emitter/index.js",
 		"/Users/matthewbrandman/ow_server/node_modules/eventemitter2/lib/eventemitter2.js",
-		"/Users/matthewbrandman/ow_server/routes/index.js",
 		"/Users/matthewbrandman/ow_server/node_modules/engine.io-client/engine.io.js",
 		"/Users/matthewbrandman/ow_server/node_modules/websocket-driver/lib/websocket/driver.js",
 		"/Users/matthewbrandman/ow_server/node_modules/socket.io/lib/client.js",
-		"/Users/matthewbrandman/ow_server/models/user.js",
-		"/Users/matthewbrandman/ow_server/routes/match.js",
-		"/Users/matthewbrandman/ow_server/game-code/pug-game.js",
-		"/Users/matthewbrandman/ow_server/app.js",
-		"/Users/matthewbrandman/ow_server/bin/www",
 		"/Users/matthewbrandman/ow_server/node_modules/mongoose/node_modules/mquery/lib/utils.js",
 		"/Users/matthewbrandman/ow_server/models/queue-entry.js",
 		"/Users/matthewbrandman/ow_server/config/kue-tasks.js",
-		"/Users/matthewbrandman/ow_server/routes/users.js",
 		"/Users/matthewbrandman/ow_server/config/kue-tasks.py",
 		"/Users/matthewbrandman/ow_server/node_modules/express/lib/express.js",
 		"/Users/matthewbrandman/ow_server/node_modules/passport-jwt/lib/strategy.js",
@@ -823,6 +818,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"vo",
+			"2",
+			"console.log",
+			"console.log(io)",
+			"console.log(app)",
+			"console.log(a",
+			"in ",
+			"updated",
+			"true",
+			"complete",
+			"compl",
 			".update",
 			"emit",
 			"adapter",
@@ -939,18 +945,7 @@
 			"seconds",
 			"\\t",
 			"auto_f",
-			"d",
-			"instance",
-			"date ",
-			"date",
-			"x ",
-			"add",
-			"ng-repeat",
-			"leadeditinst",
-			"update",
-			"modalinstancecontro",
-			"edit",
-			"enter "
+			"d"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1007,89 +1002,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "routes/index.js",
+					"file": "game-code/game-socket-init.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3151,
+						"buffer_size": 1265,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2561,
-								2561
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 2,
-								"tabSize": 2
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 587.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "models/user.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 647,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "game-code/pug-game.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3561,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2568,
-								2568
+								345,
+								345
 							]
 						],
 						"settings":
@@ -1101,66 +1026,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 945.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "routes/match.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 906,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								557,
-								557
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 2,
-								"tabSize": 2
-							}
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app.js",
+					"buffer": 1,
+					"file": "game-code/ow-socket-init.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2461,
+						"buffer_size": 2478,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								748,
-								748
+								1359,
+								1359
 							]
 						],
 						"settings":
@@ -1176,7 +1062,77 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "game-code/pug-game.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4812,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 2,
+								"tabSize": 2
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "config/game-config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 58,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

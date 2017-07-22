@@ -16,10 +16,18 @@ var User = require('./models/user');
 var users = require('./routes/users');
 
 var app = express();
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 var io = socket_io();
 app.io = io;
-var index = require('./routes/index')(io);
+module.exports = app;
+
+var gameServer = require('./game-code/pug-game')
+var index = require('./routes/index');
 var match = require('./routes/match'); 
 
 app.use(passport.initialize());
@@ -51,7 +59,7 @@ passport.use(new JwtStrategy(jwtOptions, function(jwt_payload, done) {
     });
 }));
 
-mongoose.connect('mongodb://localhost/test')
+mongoose.connect('mongodb://Farid:harris23@ds117093.mlab.com:17093/ow_server_database')
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -85,4 +93,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+//cors

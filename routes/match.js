@@ -9,7 +9,7 @@ var gameController = require('../game-code/pug-game');
 router.get('/', passport.authenticate('jwt', { session: false }), function(req, res, next) {
     var userId = new mongoose.mongo.ObjectID(req.user._id)
     Match.findOne(
-    	{ 'players.userID': userId },
+    	{ 'players.userID': userId, 'roomName': req.user.currentGame },
       'players.userID players.username players.team',
       function(err, data) {
           res.json(data);
@@ -18,19 +18,8 @@ router.get('/', passport.authenticate('jwt', { session: false }), function(req, 
 
 
 router.post('/vote', passport.authenticate('jwt', { session: false }), function(req, res) {
-    var req = req;
-    setTimeout(function(){ gameController.endGame(req.user.currentGame, req.app.io)}, 5000);
-	  var votePromise = Match.findOneAndUpdateAsync(
-	  	{ roomName: req.user.currentGame, "players.userID": req.user._id, ended: false }, 
-	  	{ $set: { "players.$.vote": req.body.winning_team }, $inc: {votes: 1} },
-      { new: true });
-    votePromise.then(function(data)
-    {
-      if (true) {
-        
-      }
-      res.json({response: 'Vote Accepted'})
-    });
+  gameController.game_vote(req.user, req.body.winning_team)
+  res.json({data: 'vote recorded'});
 });
 
 
