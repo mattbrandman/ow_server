@@ -51,8 +51,15 @@ class GameServer {
 	}
 
 	game_end(game) {
-		var winner = game.vote1 > game.vote2 ? 1 : 2;
-		winner = winner > game.vote3 ? winner: 3;
+		var winner = 0
+		if (game.vote1 > game.vote2 && game.vote1 > game.vote3) {
+			winner = 1
+		} else if (game.vote2 > game.vote1 && game.vote2 > game.vote3) {
+			winner = 2
+		} else if (game.vote3 > game.vote1 && game.vote3 > game.vote2) {
+			winner = 3
+		}
+		winner = game.vote3 > game.vote3 ? winner: 3;
 		var innerGame = game.Game;
 		var Team1 = game.Team1
 		var Team2 = game.Team2
