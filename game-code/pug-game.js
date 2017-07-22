@@ -20,6 +20,8 @@ class GameServer {
 		this.gameList[game.Game['name']] = this.game;
 		this.game['vote1'] = 0
 		this.game['vote2'] = 0
+		this.game['vote3'] = 0
+		this.game['voteList'] = [];
 		for(var i=0; i < this.game['Team1'].length; i++) {
 			socketManager.join_room(this.game['Team1'][i], this.game['name'])
 			socketManager.join_room(this.game['Team2'][i], this.game['name'])
@@ -32,18 +34,25 @@ class GameServer {
 	game_vote(user, vote) {
 		var gameName = this.userToGameList[user.id.toString()]
 		var game = this.gameList[gameName.toString()]
-		if (vote == 1 ) {
-			game['vote1'] += 1
-		} else if (vote == 2) {
-			game['vote2'] += 1
-		}
-		if (game['vote1'] + game['vote2'] == 1) {
-			setTimeout(() => this.game_end(this.game), 5000);
+		existing = this.game.voteList.indexOf(user.id.toString())
+		if (existing == -1 ) {
+			this.game.voteList.push(user.id.toString());
+			if (vote == 1 ) {
+				game['vote1'] += 1
+			} else if (vote == 2) {
+				game['vote2'] += 1
+			} else if (vote == 3) {
+				game['vote3'] += 1
+			}
+			if (game['vote1'] + game['vote2'] + game['vote3'] == 1) {
+				setTimeout(() => this.game_end(this.game), 5000);
+			}
 		}
 	}
 
 	game_end(game) {
 		var winner = game.vote1 > game.vote2 ? 1 : 2;
+		winner = winner > game.vote3 ? winner: 3;
 		var innerGame = game.Game;
 		var Team1 = game.Team1
 		var Team2 = game.Team2
@@ -54,6 +63,9 @@ class GameServer {
 			} else if (winner == 2) {
 				User.findByIdAndUpdateAsync(Team2[i]._id, {$inc: {wins: 1}})
 				User.findByIdAndUpdateAsync(Team1[i]._id, {$inc: {losses: 1}})
+			} else if (winner == 3) {
+				User.findByIdAndUpdateAsync(Team2[i]._id, {$inc: {draws: 1}})
+				User.findByIdAndUpdateAsync(Team1[i]._id, {$inc: {draws: 1}})
 			}
 		}
 		socketManager.message_to_room(game['name'], 'gameOver', {})
