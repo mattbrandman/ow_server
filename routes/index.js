@@ -26,6 +26,7 @@ router.post('/register', function(req, res) {
   });
 });
 
+
 router.post('/login', passport.authenticate('local'), function(req, res) {
   var payload = {id: req.user.id, username: req.user.username};
   var token = jwt.sign(payload, secretKey);
@@ -36,6 +37,9 @@ router.get('/profile', passport.authenticate('jwt', {session: false}), function(
   res.json({message: "success", user: req.user});
 });
 
+router.get('/health', function(req, res) {
+  res.send();
+})
 
 
 module.exports = router
