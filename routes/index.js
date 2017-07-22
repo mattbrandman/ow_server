@@ -37,8 +37,8 @@ router.get('/profile', passport.authenticate('jwt', {session: false}), function(
   res.json({message: "success", user: req.user});
 });
 
-router.get('/health', function(req, res) {
-  res.send();
+router.get('/health', function(req, res, next) {
+  res.send('thump');
 })
 
 
