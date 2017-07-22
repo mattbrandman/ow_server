@@ -34,7 +34,7 @@ class GameServer {
 	game_vote(user, vote) {
 		var gameName = this.userToGameList[user.id.toString()]
 		var game = this.gameList[gameName.toString()]
-		existing = this.game.voteList.indexOf(user.id.toString())
+		var existing = this.game.voteList.indexOf(user.id.toString())
 		if (existing == -1 ) {
 			this.game.voteList.push(user.id.toString());
 			if (vote == 1 ) {
