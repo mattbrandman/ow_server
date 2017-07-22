@@ -28,7 +28,7 @@ class QueueServer extends EventEmitter {
 	}
 
 	create_game() {
-		var playersPromise = queueItem.find().populate('user').execAsync();
+		var playersPromise = queueItem.find().populate('user').limit(2).execAsync();
 		var found_players = [];
 		var x = 1
 		playersPromise.then(players => {
